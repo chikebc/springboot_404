@@ -1,6 +1,7 @@
 package com.springboot404.springboot_404;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class Role {
@@ -12,7 +13,7 @@ public class Role {
     private String role;
 
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
-    private Collection<user> users;
+    private Collection<User> users;
     public Role() {}
 
     public Role (String role)  {
@@ -35,11 +36,11 @@ public class Role {
         this.role = role;
     }
 
-    public Collection<user> getUsers() {
+    public Collection<User> getUsers() {
         return users;
     }
 
-    public void setUsers(Collection<user> users) {
+    public void setUsers(Collection<User> users) {
         this.users = users;
     }
 }
