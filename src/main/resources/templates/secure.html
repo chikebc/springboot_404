@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Secure Page</title>
@@ -7,5 +7,9 @@
 <body>
 <h3>Secure Page</h3>
 <a href="/logout">logout</a>
+<h4>email</h4>
+<p th:text="${user.email}"></p><br/>
+<h4>last name</h4>
+<p th:text="${user.lastname}"></p>
 </body>
 </html>
