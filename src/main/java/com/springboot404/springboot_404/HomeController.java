@@ -20,14 +20,9 @@ public class HomeController {
     }
 
    // @RequestMapping("/admin")
-   // @RequestMapping("/secure")
-    @Autowired
-    UserRepository userRepository
-    //public String secure() {
-    public String secure(Principal principal, Model model) {
-        String username = principal.getName();
-        model.addAttribute("user", userRepository.findByUsername(username));
-        return "secure";
+   @RequestMapping("/secure")
+   public String secure() {
+     return "secure";
     }
 
 }
